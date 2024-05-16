@@ -30,7 +30,13 @@ with st.container(border=True):
         st.subheader(
             "💬 :violet-background[GROQ] :violet[CHATBOT]", divider='violet')
     with c2:
-        st.subheader(f"🤖 :violet-background[{user_model}]", divider='violet')
+        if user_model == "llama3-8b-8192":
+            st.subheader(f"🤖 :violet-background[LLAMA3]", divider='violet')
+        if user_model == "gemma-7b-it":
+            st.subheader(f"🤖 :violet-background[GEMMA]", divider='violet')
+        if user_model == "mixtral-8x7b-32768":
+            st.subheader(f"🤖 :violet-background[MISTRAL]", divider='violet')
+      
 
 # function
 
