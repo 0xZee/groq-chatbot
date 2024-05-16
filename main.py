@@ -52,14 +52,14 @@ def generate_response():
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "assistant", "content": "How can I help you?"}]
+        {"role": "assistant", "content": "Hi, I'm Groq ChatBot, How can I help you?"}]
 
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input():
     if not api_key:
-        st.info("Please add your OpenAI API key to continue.")
+        st.info("Please add your GROQ API key to continue.")
         st.stop()
 
     client = Groq(api_key=api_key)
