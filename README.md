@@ -26,7 +26,8 @@ This Streamlit application provides a user-friendly chat interface that integrat
 `GROQ_API_KEY="your_api_key_here"`
 
 3. **Run the App**:
-`streamlit run streamlit_app.py`
+   ```shell
+   streamlit run streamlit_app.py
 
 ## Usage :
 - Start the app to see a welcoming title and a dropdown for model selection.
