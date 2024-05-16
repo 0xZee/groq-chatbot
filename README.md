@@ -12,7 +12,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
 ## Requirements
 
 - Streamlit
-- Groq Python SDK
+- Groq Python API
 - Python 3.7 or higher
 
 ## Setup and Installation
@@ -22,7 +22,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
    pip install streamlit groq
 
 2. **GROQ API Key**:
-# .streamlit/secrets.toml
+Update your GROQ API Key in : .streamlit/secrets.toml
 `GROQ_API_KEY="your_api_key_here"`
 
 3. **Run the App**:
@@ -31,6 +31,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
 
 ## Usage :
 - Start the app to see a welcoming title and a dropdown for model selection.
+- Enter your GROQ API Key in the Sidebar menu.
 - Select your desired model to begin interacting with the chat interface.
 - Enter your prompts, and the app will display both the user’s inquiries and the AI’s responses, enabling an engaging dialogue. 
 
