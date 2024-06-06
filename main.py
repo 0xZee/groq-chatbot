@@ -53,12 +53,11 @@ model_gemma = "gemma-7b-it"
 model_mixtral = "mixtral-8x7b-32768"
 model_whistper = "whisper-large-v3"
 
-llm = Groq(model=user_model, api_key=api_key)
-Settings.llm = llm
+# llm_groq = Groq(model=user_model, api_key=api_key)
+# Settings.llm = llm_groq
 
 
 # fuctions
-#
 # Initialize the chat messages history
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
@@ -77,6 +76,8 @@ def add_to_message_history(role, content):
 # Initiate Chat Engin : SimpleChatEngine
 if "chat_engine" not in st.session_state:
     # st.session_state["chat_engine"] = Groq(model=model_llama, api_key=api_key)
+    llm_groq = Groq(model=user_model, api_key=api_key)
+    Settings.llm = llm_groq
     st.session_state["chat_engine"] = SimpleChatEngine.from_defaults()
 
 # Display the prior chat messages
