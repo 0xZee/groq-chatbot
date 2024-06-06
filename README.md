@@ -5,7 +5,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
 ## Features
 
 - **Model Selection**: Choose from 3 models including `mixtral-8x7b-32768`,  `Gemma-7b-it` and `lama3-8b-8192` to customize the conversation dynamics. Default is : `lama3-8b-8192`
-- **Chat History**: Retains a session-based chat history for a coherent conversational experience throughout the user's session. --> under construction
+- **Chat History**: Retains a session-based chat history for a coherent conversational experience throughout the user's session via `llama-index chat engine`.
 - **Dynamic Response Generation**: Leverages a generator function to fetch and stream responses dynamically from the Groq API for a fluid chat interaction.
 
 
@@ -19,7 +19,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
 
 1. **Install Dependencies**:
    ```shell
-   pip install streamlit groq
+   pip install -r requirements.txt
 
 2. **GROQ API Key**:
 Update your GROQ API Key in : .streamlit/secrets.toml
@@ -27,7 +27,7 @@ Update your GROQ API Key in : .streamlit/secrets.toml
 
 3. **Run the App**:
    ```shell
-   streamlit run streamlit_app.py
+   streamlit run main.py
 
 ## Usage :
 - Start the app to see a welcoming title and a dropdown for model selection.
