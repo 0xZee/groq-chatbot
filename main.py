@@ -27,7 +27,7 @@ with st.sidebar:
         "Select Model", ["llama3-8b-8192", "gemma-7b-it", "mixtral-8x7b-32768"])
 
     st.divider()
-    if st.button("Clear Chat Session", use_container_width=True, type="primary"):
+    if st.button("Clear Chat Session", use_container_width=True, type="secondary"):
         st.session_state["messages"] = [
             {"role": "assistant", "content": "Hi, I'm here to help, Ask me a question ! :star:"}]
 
