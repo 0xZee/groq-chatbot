@@ -9,8 +9,8 @@ st.set_page_config(page_title="Groq ChatBot", page_icon=":robot_face:",
 
 # sidebar
 with st.sidebar:
-    st.code("OxZee Groq Inference ChatBot")
-    st.code("https://github.com/0xZee/groq-chatbot/")
+    st.code("OxZee Groq LLM ChatBot")
+    st.text("https://github.com/0xZee/groq-chatbot/")
     st.subheader("GROQ API", divider="grey")
     if ("GROQ_API" in st.secrets and st.secrets['GROQ_API'].startswith('gsk_')):
         st.success('Your GROQ API key is provided')
@@ -27,7 +27,7 @@ with st.sidebar:
         "Select Model", ["llama3-8b-8192", "gemma-7b-it", "mixtral-8x7b-32768"])
 
     st.divider()
-    if st.button("Clear Chat Session", use_container_width=True, type="secondary"):
+    if st.button("Clear Chat Session", use_container_width=True, type="primary"):
         st.session_state["messages"] = [
             {"role": "assistant", "content": "Hi, I'm here to help, Ask me a question ! :star:"}]
 
@@ -53,8 +53,8 @@ model_gemma = "gemma-7b-it"
 model_mixtral = "mixtral-8x7b-32768"
 model_whistper = "whisper-large-v3"
 
-LLM_GROQ = Groq(model=user_model, api_key=api_key)
-Settings.llm = LLM_GROQ
+llm = Groq(model=user_model, api_key=api_key)
+Settings.llm = llm
 
 
 # fuctions
