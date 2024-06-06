@@ -58,6 +58,7 @@ model_whistper = "whisper-large-v3"
 
 
 # fuctions
+#
 # Initialize the chat messages history
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
@@ -78,7 +79,8 @@ if "chat_engine" not in st.session_state:
     # st.session_state["chat_engine"] = Groq(model=model_llama, api_key=api_key)
     llm_groq = Groq(model=user_model, api_key=api_key)
     Settings.llm = llm_groq
-    st.session_state["chat_engine"] = SimpleChatEngine.from_defaults()
+    st.session_state["chat_engine"] = SimpleChatEngine.from_defaults(
+        llm=llm_groq)
 
 # Display the prior chat messages
 for message in st.session_state["messages"]:
