@@ -27,7 +27,7 @@ Update your GROQ API Key in : .streamlit/secrets.toml
 
 3. **Run the App**:
    ```shell
-   streamlit run main.py
+   streamlit run app.py
 
 ## Usage :
 - Start the app to see a welcoming title and a dropdown for model selection.
