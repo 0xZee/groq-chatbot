@@ -13,6 +13,7 @@ This Streamlit application provides a user-friendly chat interface that integrat
 
 - Streamlit
 - Groq Python API
+- llama-index
 - Python 3.7 or higher
 
 ## Setup and Installation
